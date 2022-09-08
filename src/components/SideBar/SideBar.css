@@ -1,0 +1,30 @@
+.sidebar {
+	width: 240px;
+
+	height: 100vh;
+	position: fixed;
+	top: 90px;
+	padding-left: 2rem;
+	padding-top: 4rem;
+	background: rgba(0, 0, 0, 0.08);
+}
+.sidebar-option {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 20px;
+	width: 100%;
+	background: none;
+	outline: none;
+}
+.sidebar-option i{
+	margin-right: 6px;
+}
+.main-container {
+	display: flex;
+	flex-grow: 1;
+}
+.content-container {
+	margin-top: 90px;
+	margin-left: 240px;
+	padding: 2rem;
+}

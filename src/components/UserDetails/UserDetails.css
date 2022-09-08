@@ -1,0 +1,31 @@
+.user-details .top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	
+}
+.user-details .avatar-container {
+	margin-right: 15px;
+	align-self: flex-start;
+}
+.user-details .user-stats {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+
+.user-details .stat-item {
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+}
+.user-details strong {
+	margin-right: 8px;
+	color: var(--secondary-text);
+	font-weight: 700;
+	font-size: 18px;
+}
+.user-details p {
+	font-size: 16px;
+}
