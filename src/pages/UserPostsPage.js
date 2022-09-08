@@ -111,6 +111,7 @@ export default function UserPostsPage() {
 	
 	
 	function init() {
+		console.log("test")
 		setTimeout( () => {
 			setPosts([user_post, user_post, user_post]);
 		}, 1000)
