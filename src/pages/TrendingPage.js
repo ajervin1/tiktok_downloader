@@ -21,8 +21,8 @@ export default function TrendingPage() {
 	const [ modalOpen, setModalOpen ] = useState(false)
 	function init() {
 		setTimeout( () => {
-			setPosts([post,post,post,post,post, post, post, post]);
-		}, 3000)
+			setPosts([post,post,post,post,post]);
+		}, 1000)
 	}
 	
 	useEffect(() => {
