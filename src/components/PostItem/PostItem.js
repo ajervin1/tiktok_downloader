@@ -10,11 +10,7 @@ export default function PostItem( { post, setSelectedPost, setModalOpen } ) {
 		<div className="image-container">
 			<img src={video.dynamicCover} alt=""/>
 		</div>
-		<div className="bottom">
-			<p className="description">
-				{desc.slice(0, 10)}
-			</p>
-		</div>
+	
 		<div className="overlay">
 			<div className="plays">
 				<i className="fa fa-play"></i>

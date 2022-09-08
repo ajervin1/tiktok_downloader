@@ -18,7 +18,7 @@ export default function TrendingPage() {
 	// SelectedPost
 	const [ selectedPost, setSelectedPost ] = useState(null)
 	// Modal State
-	const [ modalOpen, setModalOpen ] = useState(true)
+	const [ modalOpen, setModalOpen ] = useState(false)
 	function init() {
 		setTimeout( () => {
 			setPosts([post,post,post,post,post]);
