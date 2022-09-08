@@ -29,16 +29,18 @@
 
 .modal {
 	position: relative;
-	width: 800px;
+	width: 1100px;
 	opacity: 1;
 	position: relative;
 	z-index: 9000;
 	background: white;
 	display: flex;
+	height: 600px;
 }
 
 .modal .user-details {
 	padding: 2rem;
+	width: 90%;
 }
 .modal .top {
 	display: flex;
@@ -73,4 +75,7 @@
 	cursor: pointer;
 	display: inline-block;
 	padding: 5px;
+}
+.modal .video-item {
+	width: 100%;
 }
