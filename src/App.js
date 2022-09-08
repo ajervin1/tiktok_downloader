@@ -9,6 +9,7 @@ import UserPostsPage from "./pages/UserPostsPage";
 
 
 function App() {
+	console.log("hello")
 	return <main className="app">
 		<Header />
 		<Routes>
