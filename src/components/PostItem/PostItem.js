@@ -1,8 +1,12 @@
 import './PostItem.css'
 
-export default function PostItem( { post } ) {
+export default function PostItem( { post, setSelectedPost, setModalOpen } ) {
+	function handleClick( e ) {
+		setSelectedPost(post);
+		setModalOpen(true)
+	}
 	const {desc, stats, video} = post;
-	return <article className="post-item post-item-container">
+	return <article onClick={handleClick} className="post-item post-item-container">
 		<div className="image-container">
 			<img src={video.dynamicCover} alt=""/>
 		</div>

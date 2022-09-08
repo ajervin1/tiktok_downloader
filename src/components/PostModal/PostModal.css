@@ -1,0 +1,76 @@
+
+.modal-backdrop {
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	
+	z-index: 1;
+}
+
+.modal-container {
+	z-index: 9000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-wrapper {
+	margin: 0 auto;
+}
+
+.modal {
+	position: relative;
+	width: 800px;
+	opacity: 1;
+	position: relative;
+	z-index: 9000;
+	background: white;
+	display: flex;
+}
+
+.modal .user-details {
+	padding: 2rem;
+}
+.modal .top {
+	display: flex;
+	margin-bottom: 15px;
+}
+.modal .username-meta {
+	padding-left: 15px;
+	padding-top: 8px;
+}
+.modal .middle {
+	margin-bottom: 15px;
+}
+.modal .bottom {
+	display: flex;
+	align-items: center;
+}
+.modal .bottom .stat-item {
+	margin-right: 18px;
+	display: flex;
+	align-items: center;
+}
+.modal .bottom i {
+	margin-right: 8px;
+}
+.modal .bottom h6 {
+	opacity: 0.6;
+}
+.modal .close-btn {
+	position: absolute;
+	right: 18px;
+	top: 15px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px;
+}

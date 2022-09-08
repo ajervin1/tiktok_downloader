@@ -12,3 +12,27 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+.user-post-list {
+	gap: 24px 16px;
+	grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));	display: grid;
+
+}
+.user-post-item {
+	border-radius: 4px;
+}
+.user-avatar {
+	width: 116px;
+	height: 116px;
+}
+.user-avatar-small {
+	width: 32px;
+	height: 32px;
+}
+.post-item-list {
+	width: 100%;
+	display: grid;
+	gap: 24px 16px;
+	grid-template-columns: repeat(auto-fill, minmax(184px, 1fr));
+}
+

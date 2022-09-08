@@ -1,3 +1,6 @@
+.user-details-container {
+	margin-bottom: 60px;
+}
 .user-details .top {
 	display: flex;
 	align-items: center;
