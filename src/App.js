@@ -1,9 +1,11 @@
 import './App.css';
+import './components/AccountItem/AccountItem.css'
 import { useEffect, useState } from "react";
 import PostItem from "./components/PostItem/PostItem";
 import SideBar from "./components/SideBar/SideBar";
 import Header from "./components/Header/Header";
 import PostModal from "./components/PostModal/PostModal";
+import Avatar from "./components/Avatar/Avatar";
 
 const results = {
 	"status_code": 203,
@@ -3094,6 +3096,27 @@ const results = {
 	"backtrace": ""
 }
 
+function AccountItem( {account} ) {
+	const {user_info} = account
+	const {avatar_thumb} = user_info
+	return <article className={'account-item'}>
+		<Avatar  image={avatar_thumb.url_list[0]} size={100} />
+		<div className={'right'}>
+			<h3 >{user_info.nickname}</h3>
+			<div>
+				<h5 style={{opacity: 0.5, marginBottom: '2px'}} >{user_info.unique_id}</h5>
+				<div className="followers" style={{marginBottom: "2px"}}>
+					<strong style={{marginRight: '10px'}}>{user_info.follower_count}</strong>
+					<span style={{opacity: 0.5}}>Followers</span>
+				</div>
+			</div>
+			<p>{user_info.signature}</p>
+		
+			
+		</div>
+	</article>
+}
+
 function App() {
 	const [ data, setData ] = useState(results.data);
 
@@ -3101,21 +3124,26 @@ function App() {
 	const [ modalOpen, setModalOpen ] = useState(false);
 	const accounts = data.filter(item => {
 		return item.type === 4;
-	});
+	})[0].user_list
 	const posts = data.filter(item => {
 		return item.type === 1;
 	});
+	console.log(accounts)
 	return <main className="app">
 		<Header/>
 		<main className="main-container">
 			<SideBar/>
 			<div className="content content-container">
+				<h2 style={{marginBottom: "20px"}}>Accounts</h2>
+				{ accounts.map(account => {
+					return <AccountItem account={account} />
+				}) }
+				<h2 style={{marginBottom: "20px"}}>Videos</h2>
 				<div className="post-item-list">
 					{ posts.map(post => {
 						return <PostItem key={post.item.id} post={ post.item }  setSelectedPost={ setSelectedPost } setModalOpen={ setModalOpen }/>
 					}) }
 				</div>
-			
 			</div>
 			{ selectedPost && modalOpen  && <PostModal post={selectedPost} setModalOpen={setModalOpen} /> }
 		</main>
