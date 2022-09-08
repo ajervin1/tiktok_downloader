@@ -22,7 +22,7 @@ export default function TrendingPage() {
 	function init() {
 		setTimeout( () => {
 			setPosts([post,post,post,post,post]);
-		}, 3000)
+		}, 1000)
 	}
 	
 	useEffect(() => {
